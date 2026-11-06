@@ -16,6 +16,14 @@ The result is a genuine proof of concept, not a claim of native ARM64 support. B
 
 ![Published applications and a launched Windows desktop session](../assets/published-desktop.png)
 
+The later capture below shows the same lab session with the published RAS 22 applications visible, alongside a launched Remote Desktop Connection window and a Windows Notepad session.
+
+![Animated Raspberry Pi desktop launch capture](../assets/pi4-desktop-launch.gif)
+
+![RAS 22 published applications with Remote Desktop Connection and Notepad](../assets/ras22-published-applications.png)
+
+![RAS Insider Lab desktop used for the test](../assets/ras-insider-lab-desktop.png)
+
 The public repository contains only the build scripts, documentation and test record. It does **not** contain the Parallels `.deb`, Parallels libraries or a generated client package. Anyone reproducing the test must obtain the official package under their own Parallels licence and must respect the applicable terms, authentication and certificate checks.
 
 This was validated on one Raspberry Pi 4 profile only. Raspberry Pi 3, Raspberry Pi 5, other boards, production workloads, printing, smart cards, USB redirection, audio, multi-monitor behavior, MFA variants and long-term upgrades remain unvalidated. The result should be treated as an engineering experiment for RAS 22, not as a supported product recommendation.
