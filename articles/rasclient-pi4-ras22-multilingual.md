@@ -20,9 +20,9 @@ The later capture below shows the same lab session with the published RAS 22 app
 
 ![Animated Raspberry Pi desktop launch capture](../assets/pi4-desktop-launch.gif)
 
-![RAS 22 published applications with Remote Desktop Connection and Notepad](../assets/ras22-published-applications.png)
+![RAS 22 published applications with Remote Desktop Connection and Notepad](../assets/ras22-published-applications.jpg)
 
-![RAS Insider Lab desktop used for the test](../assets/ras-insider-lab-desktop.png)
+![RAS Insider Lab desktop used for the test](../assets/ras-insider-lab-desktop.jpg)
 
 The public repository contains only the build scripts, documentation and test record. It does **not** contain the Parallels `.deb`, Parallels libraries or a generated client package. Anyone reproducing the test must obtain the official package under their own Parallels licence and must respect the applicable terms, authentication and certificate checks.
 
