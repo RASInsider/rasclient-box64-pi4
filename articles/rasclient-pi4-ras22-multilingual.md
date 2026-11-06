@@ -1,6 +1,6 @@
 # Raspberry Pi 4 as a Parallels RAS 22 client: an experimental Box64 proof of concept
 
-![Raspberry Pi 4 running a remote application through an x86 compatibility layer](../assets/rasclient-pi4-featured.png)
+![Raspberry Pi 4 running a remote application through an x86 compatibility layer](../assets/rasclient-pi4-featured.jpg)
 
 > **Editorial status:** experimental, unofficial and laboratory-only. This project is independent from Parallels and is not supported or endorsed by Parallels.
 
@@ -12,9 +12,9 @@ The Linux client existed as an amd64 package, but a native ARM64 Linux client is
 
 The result is a genuine proof of concept, not a claim of native ARM64 support. Box64 starts the official `appserverclient` binary and the Qt/XCB graphical client. In a private RAS 22 laboratory environment, the client connected to a Gateway over SSL, displayed published resources, and launched a published Windows application. The Pi desktop also exposed a normal application-menu entry, with no terminal window required at launch.
 
-![Parallels Client entry in the Raspberry Pi application menu](../assets/menu-entry.png)
+![Parallels Client entry in the Raspberry Pi application menu](../assets/menu-entry.jpg)
 
-![Published applications and a launched Windows desktop session](../assets/published-desktop.png)
+![Published applications and a launched Windows desktop session](../assets/ras22-published-applications.jpg)
 
 The later capture below shows the same lab session with the published RAS 22 applications visible, alongside a launched Remote Desktop Connection window and a Windows Notepad session.
 
