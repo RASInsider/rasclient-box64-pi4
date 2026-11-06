@@ -84,21 +84,21 @@ Das öffentliche Repository enthält ausschließlich Build-Skripte, Dokumentatio
 
 Validiert wurde ausschließlich ein Raspberry Pi 4. Andere Pi-Modelle, produktive Nutzung, Drucken, Smartcards, USB-Umleitung, Audio, mehrere Monitore, MFA-Varianten und Upgrades sind noch nicht validiert. Das Ergebnis ist ein technisches Experiment für ein RAS-22-Labor und kein unterstütztes Produkt.
 
-## Italiano
+## Nederlands
 
-Questa analisi nasce da una richiesta di un cliente: è possibile usare un Raspberry Pi come client leggero Parallels RAS per accedere alle applicazioni pubblicate?
+Dit onderzoek begon met een klantvraag: kan een Raspberry Pi worden gebruikt als lichte Parallels RAS-client voor gepubliceerde toepassingen?
 
-Il client Linux esisteva come pacchetto amd64, ma per questo scenario non è disponibile un client Linux ARM64 nativo. Abbiamo quindi testato il pacchetto ufficiale Parallels RAS Linux amd64 tramite Box64 su un Raspberry Pi 4 con Raspberry Pi OS Trixie ARM64, usando Parallels RAS 22 come ambiente di destinazione.
+De Linux-client bestond als amd64-pakket, maar voor dit scenario is geen native ARM64 Linux-client beschikbaar. Daarom hebben we het officiële Parallels RAS Linux amd64-pakket via Box64 getest op een Raspberry Pi 4 met Raspberry Pi OS Trixie ARM64, met Parallels RAS 22 als doelomgeving.
 
-Il risultato è una prova di concetto reale, non il supporto ARM64 nativo. Box64 avvia il binario ufficiale `appserverclient` e il client grafico Qt/XCB. In un ambiente RAS 22 privato di laboratorio, il client si è collegato a una Gateway tramite SSL, ha visualizzato le risorse pubblicate e ha avviato un’applicazione Windows pubblicata. È presente anche una normale voce nel menu delle applicazioni, senza una grande finestra di terminale all’avvio.
+Het resultaat is een echte proof of concept, geen native ARM64-ondersteuning. Box64 start het officiële `appserverclient`-programma en de grafische Qt/XCB-client. In een private RAS 22-labomgeving maakte de client via SSL verbinding met een Gateway, toonde hij gepubliceerde resources en startte hij een gepubliceerde Windows-toepassing. Er staat ook een normale toepassing in het Raspberry Pi-menu, zonder groot terminalvenster bij het starten.
 
-### Che cosa è successo al vecchio client ARM?
+### Wat gebeurde er met de oude ARM-client?
 
-In passato Parallels distribuiva un client dedicato per ARM/Raspberry Pi. Le note di transizione a RAS 17 indicano che il supporto per ARM e Raspberry Pi è stato interrotto mentre il client Linux veniva orientato verso piattaforme a 64 bit/x64. Lo stesso documento cita il progressivo abbandono delle architetture a 32 bit nell’ecosistema software e l’allineamento a requisiti più recenti di piattaforma e prestazioni. Parallels non ha pubblicato una spiegazione tecnica o commerciale più dettagliata. Questo progetto usa quindi l’attuale client Linux amd64 ufficiale tramite Box64; non ripristina né redistribuisce il vecchio client ARM.
+Parallels leverde vroeger een speciale ARM/Raspberry Pi-client. De overgangsnotities voor RAS 17 vermelden dat de ondersteuning voor ARM en Raspberry Pi werd beëindigd terwijl de Linux-client werd gericht op 64-bits/x64-platformen. Hetzelfde document verwijst naar de afnemende ondersteuning voor 32-bitsarchitecturen in het software-ecosysteem en naar aansluiting bij nieuwere platform- en prestatie-eisen. Parallels heeft geen uitgebreidere technische of commerciële verklaring gepubliceerd. Dit project gebruikt daarom de huidige officiële Linux amd64-client via Box64; de oude ARM-client wordt niet nieuw leven ingeblazen of verspreid.
 
-Il repository pubblico contiene soltanto gli script di compilazione, la documentazione e i risultati dei test. Non contiene il `.deb` Parallels, le librerie Parallels né un pacchetto client generato. Per riprodurre il test è necessario ottenere il pacchetto ufficiale con la propria licenza Parallels e rispettare i termini applicabili, l’autenticazione e i controlli dei certificati.
+De openbare repository bevat alleen buildscripts, documentatie en testresultaten. Het Parallels `.deb`-bestand, Parallels-bibliotheken en een gegenereerd clientpakket zijn uitgesloten. Voor reproductie moet het officiële pakket onder de eigen Parallels-licentie worden verkregen en moeten de toepasselijke voorwaarden, authenticatie en certificaatcontroles worden gerespecteerd.
 
-La validazione è stata eseguita esclusivamente su un Raspberry Pi 4. Altri modelli, uso in produzione, stampa, smart card, reindirizzamento USB, audio, più monitor, varianti MFA e aggiornamenti non sono ancora validati. Si tratta di un esperimento tecnico per un laboratorio RAS 22, non di un prodotto supportato.
+De validatie is uitsluitend uitgevoerd op een Raspberry Pi 4. Andere modellen, productiegebruik, afdrukken, smartcards, USB-omleiding, audio, meerdere monitoren, MFA-varianten en upgrades zijn nog niet gevalideerd. Dit is een technisch experiment voor een RAS 22-lab, geen ondersteund product.
 
 ## Legal and attribution note
 
