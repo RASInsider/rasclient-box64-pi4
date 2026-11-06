@@ -12,6 +12,12 @@ The Linux client existed as an amd64 package, but a native ARM64 Linux client is
 
 The result is a genuine proof of concept, not a claim of native ARM64 support. Box64 starts the official `appserverclient` binary and the Qt/XCB graphical client. In a private RAS 22 laboratory environment, the client connected to a Gateway over SSL, displayed published resources, and launched a published Windows application. The Pi desktop also exposed a normal application-menu entry, with no terminal window required at launch.
 
+### What happened to the original ARM client?
+
+Parallels previously shipped a dedicated ARM/Raspberry Pi client. Its public RAS 17 transition notes state that ARM and Raspberry Pi support was discontinued as Parallels moved Linux support toward 64-bit/x64 platforms. The same notice refers to the declining support for 32-bit architectures in the wider software ecosystem and to alignment with newer platform and performance requirements. Parallels did not publish a more specific technical or commercial explanation. This project therefore uses the current official Linux amd64 client through Box64; it does not revive or redistribute the old ARM client.
+
+Sources: [RAS 16.5 transition notice](https://download.parallels.com/ras/v16.5/docs/en_US/Parallels-RAS-v16-5-Administrators-Guide.pdf) and [RAS 17 release notes](https://forum.parallels.com/threads/parallels-remote-application-server-v17-0-release-notes.347396/).
+
 ![Parallels Client entry in the Raspberry Pi application menu](../assets/menu-entry.jpg)
 
 ![Published applications and a launched Windows desktop session](../assets/ras22-published-applications.jpg)
@@ -38,6 +44,10 @@ Le client Linux existait sous la forme d’un paquet amd64, mais aucun client Li
 
 Le résultat est un véritable POC, et non une prise en charge ARM64 native. Box64 lance le binaire officiel `appserverclient` ainsi que le client graphique Qt/XCB. Dans un environnement RAS 22 privé de laboratoire, le client s’est connecté à une Gateway en SSL, a affiché les ressources publiées et a lancé une application Windows publiée. Une entrée normale apparaît également dans le menu du Raspberry Pi, sans grande fenêtre de terminal au lancement.
 
+### Que s’est-il passé avec l’ancien client ARM ?
+
+Parallels distribuait auparavant un client ARM/Raspberry Pi dédié. Les notes de transition vers RAS 17 indiquent que le support ARM et Raspberry Pi a été arrêté lors du recentrage du client Linux sur les plateformes 64 bits/x64. Le même document évoque le recul du support des architectures 32 bits dans l’écosystème logiciel et l’alignement sur les exigences récentes de plateforme et de performance. Parallels n’a pas publié d’explication technique ou commerciale plus précise. Ce projet utilise donc le client Linux amd64 officiel actuel via Box64 ; il ne ressuscite pas et ne redistribue pas l’ancien client ARM.
+
 Le dépôt public contient uniquement les scripts de construction, la documentation et le relevé de test. Il ne contient ni le `.deb` Parallels, ni les bibliothèques Parallels, ni un paquet client généré. Toute personne souhaitant reproduire le test doit obtenir le paquet officiel dans le cadre de sa propre licence Parallels et respecter les conditions applicables, l’authentification et les contrôles de certificats.
 
 La validation porte uniquement sur un Raspberry Pi 4. Les autres modèles, les usages de production, l’impression, les cartes à puce, la redirection USB, l’audio, le multi-écran, les variantes MFA et les mises à niveau restent à tester. Il s’agit d’une expérience technique compatible avec un environnement RAS 22 de laboratoire, pas d’un produit supporté.
@@ -49,6 +59,10 @@ Esta investigación responde a una petición de cliente: ¿se puede utilizar una
 El cliente Linux existía como paquete amd64, pero no se dispone de un cliente Linux ARM64 nativo para este escenario. Probamos el paquete oficial Parallels RAS Linux amd64 mediante Box64 en una Raspberry Pi 4 con Raspberry Pi OS Trixie ARM64, utilizando Parallels RAS 22 como destino.
 
 El resultado es una prueba de concepto real, no soporte ARM64 nativo. Box64 inicia el binario oficial `appserverclient` y el cliente gráfico Qt/XCB. En un entorno privado de laboratorio RAS 22, el cliente se conectó a una Gateway mediante SSL, mostró los recursos publicados y lanzó una aplicación Windows publicada. También aparece una entrada normal en el menú de aplicaciones, sin abrir una gran ventana de terminal.
+
+### ¿Qué ocurrió con el antiguo cliente ARM?
+
+Parallels distribuía anteriormente un cliente específico para ARM/Raspberry Pi. Las notas de transición a RAS 17 indican que se dejó de ofrecer soporte para ARM y Raspberry Pi al orientar el cliente Linux hacia plataformas de 64 bits/x64. El mismo documento menciona la pérdida de soporte de las arquitecturas de 32 bits en el ecosistema de software y la adaptación a requisitos más recientes de plataforma y rendimiento. Parallels no publicó una explicación técnica o comercial más detallada. Este proyecto utiliza el cliente Linux amd64 oficial actual mediante Box64; no recupera ni redistribuye el antiguo cliente ARM.
 
 El repositorio público contiene únicamente scripts de compilación, documentación y resultados de prueba. No contiene el `.deb` de Parallels, sus bibliotecas ni un paquete de cliente generado. Para reproducir la prueba es necesario obtener el paquete oficial bajo la propia licencia de Parallels y respetar las condiciones aplicables, la autenticación y las comprobaciones de certificados.
 
@@ -62,6 +76,10 @@ Der Linux-Client war als amd64-Paket verfügbar, jedoch steht für dieses Szenar
 
 Das Ergebnis ist ein echter Proof of Concept und keine native ARM64-Unterstützung. Box64 startet das offizielle `appserverclient`-Programm und den grafischen Qt/XCB-Client. In einer privaten RAS-22-Laborumgebung stellte der Client über SSL eine Verbindung zu einer Gateway her, zeigte veröffentlichte Ressourcen an und startete eine veröffentlichte Windows-Anwendung. Außerdem erscheint ein normaler Eintrag im Anwendungsmenü, ohne dass beim Start ein großes Terminalfenster geöffnet werden muss.
 
+### Was geschah mit dem früheren ARM-Client?
+
+Parallels bot früher einen eigenen ARM/Raspberry-Pi-Client an. Die Übergangshinweise zu RAS 17 besagen, dass die Unterstützung für ARM und Raspberry Pi beendet wurde, während der Linux-Client auf 64-Bit-/x64-Plattformen ausgerichtet wurde. Dasselbe Dokument verweist auf die sinkende Unterstützung von 32-Bit-Architekturen im Software-Ökosystem sowie auf die Anpassung an neuere Plattform- und Leistungsanforderungen. Eine detailliertere technische oder wirtschaftliche Begründung hat Parallels nicht veröffentlicht. Dieses Projekt verwendet deshalb den aktuellen offiziellen Linux-amd64-Client über Box64; der alte ARM-Client wird weder wiederbelebt noch weiterverteilt.
+
 Das öffentliche Repository enthält ausschließlich Build-Skripte, Dokumentation und Testergebnisse. Es enthält weder das Parallels-`.deb` noch Parallels-Bibliotheken oder ein erzeugtes Client-Paket. Für eine Reproduktion muss das offizielle Paket unter der eigenen Parallels-Lizenz beschafft werden; die geltenden Bedingungen, Authentifizierung und Zertifikatsprüfungen sind einzuhalten.
 
 Validiert wurde ausschließlich ein Raspberry Pi 4. Andere Pi-Modelle, produktive Nutzung, Drucken, Smartcards, USB-Umleitung, Audio, mehrere Monitore, MFA-Varianten und Upgrades sind noch nicht validiert. Das Ergebnis ist ein technisches Experiment für ein RAS-22-Labor und kein unterstütztes Produkt.
@@ -73,6 +91,10 @@ Questa analisi nasce da una richiesta di un cliente: è possibile usare un Raspb
 Il client Linux esisteva come pacchetto amd64, ma per questo scenario non è disponibile un client Linux ARM64 nativo. Abbiamo quindi testato il pacchetto ufficiale Parallels RAS Linux amd64 tramite Box64 su un Raspberry Pi 4 con Raspberry Pi OS Trixie ARM64, usando Parallels RAS 22 come ambiente di destinazione.
 
 Il risultato è una prova di concetto reale, non il supporto ARM64 nativo. Box64 avvia il binario ufficiale `appserverclient` e il client grafico Qt/XCB. In un ambiente RAS 22 privato di laboratorio, il client si è collegato a una Gateway tramite SSL, ha visualizzato le risorse pubblicate e ha avviato un’applicazione Windows pubblicata. È presente anche una normale voce nel menu delle applicazioni, senza una grande finestra di terminale all’avvio.
+
+### Che cosa è successo al vecchio client ARM?
+
+In passato Parallels distribuiva un client dedicato per ARM/Raspberry Pi. Le note di transizione a RAS 17 indicano che il supporto per ARM e Raspberry Pi è stato interrotto mentre il client Linux veniva orientato verso piattaforme a 64 bit/x64. Lo stesso documento cita il progressivo abbandono delle architetture a 32 bit nell’ecosistema software e l’allineamento a requisiti più recenti di piattaforma e prestazioni. Parallels non ha pubblicato una spiegazione tecnica o commerciale più dettagliata. Questo progetto usa quindi l’attuale client Linux amd64 ufficiale tramite Box64; non ripristina né redistribuisce il vecchio client ARM.
 
 Il repository pubblico contiene soltanto gli script di compilazione, la documentazione e i risultati dei test. Non contiene il `.deb` Parallels, le librerie Parallels né un pacchetto client generato. Per riprodurre il test è necessario ottenere il pacchetto ufficiale con la propria licenza Parallels e rispettare i termini applicabili, l’autenticazione e i controlli dei certificati.
 
